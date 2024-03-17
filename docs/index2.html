@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <title>Elfaster</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/">
+        <span class="logo">
+          <img
+            height="32px"
+            src="https://static.elfster.com/2024.301.1901.4627/apps/vue/static/images/elfster-logo-black.png?571319bdd9389d676db9"
+            alt=""
+          />
+        </span>
+      </a>
+    </nav>
+      <div class="parent-progress">
+        <div class="progress-bar"></div>
+        <div class="bar">
+          <div class="progress"></div>
+        </div>
+      <div class="none-progress"></div>
+      <div class="none-progress"></div>
+      <div class="none-progress"></div>
+    </div>
+    <section class="form-div-parent">
+      <div class="form-div">
+        <h3 class="roboto-slab">The gifting details</h3>
+        <p>
+          Personalize your Elfster exchange below with important info guests <br> need to know. 
+        </p>
+        <div class="form-div-child">
+          <div class="flex-col-gap">
+            <div class="flex-col">
+              <label for="name">Name Your Elfster Exchange </label>
+              <input
+                type="text"
+                name=""
+                id="name"
+                placeholder="e.g. Elfie's Secret Santa Extravaganza"
+                class="name-input"
+              />
+            </div>
+
+            <div class="flex-col">
+              <label for="name">Set The Date</label>
+              <input
+                type="date"
+                name=""
+                id="name"
+                placeholder="When is it happening?"
+                class="name-input"
+              />
+            </div>
+
+            <div class="flex-col">
+              <label for="name">Sign-up deadline</label>
+              <input
+                type="date"
+                name="When do you want to draw names?"
+                id="name"
+                placeholder="When do you want to draw names?"
+                class="name-input"
+              />
+            </div>
+
+            <div>
+              <label for="name">Sending Gifts By Mail?</label>
+              <br>
+              <div style="display: flex; gap:20px; line-height: 20px;">
+                <input type="checkbox" name="" id="checkme">
+                <label for="checkme" style="color: gray;" class="check-data">By checking this box, participants will be asked to provide a mailing address where their gift should be <br> sent </label>
+              </div>
+            </div>
+
+            <div class="flex-col">
+              <label for="name">Gift Budget</label>
+              <div style="display: flex; gap: 1px; border: 1px solid teal; border-radius: 4px; padding: 2px 10px; justify-content: space-between;">
+                <div style="display: flex;">
+                  <p>$</p>
+                  <input
+                    type="number"
+                    name=""
+                    id="name"
+                    style="border: none; outline: none;"
+                  />
+                </div>
+                <button onclick="togglePopup()" style="text-decoration: underline; background-color: #fff; border: none;">
+                  Change Currency
+                </button>
+              </div>
+            </div>
+
+            <!-- Popup container -->
+            <div id="popup" class="popup-container">
+              <div>
+                <p style="text-align: center; padding: 10px 0; font-size: 1rem; font-family:'Roboto Slab'";">Choose Currency: </p>
+                <hr>
+              </div>
+              <div style="height: 200px; text-align: center; overflow: scroll;">
+                <p style="padding: 4px 2px;"><span>USD $</span></p>
+                <p style="padding: 4px 2px;"><span>CAD $</span></p>
+                <p style="padding: 4px 2px;"><span>GBP £</span></p>
+                <p style="padding: 4px 2px;"><span>AUD $</span></p>
+                <p style="padding: 4px 2px;"><span>EUR €</span></p>
+                <p style="padding: 4px 2px;"><span>MXN $</span></p>
+                <p style="padding: 4px 2px;"><span>BRL $</span></p>
+                <p style="padding: 4px 2px;"><span>HKD $</span></p>
+                <p style="padding: 4px 2px;"><span>INR ₹</span></p>
+                <p style="padding: 4px 2px;"><span>BTC ₿</span></p>
+              </div>
+              <div style="display: flex;flex-direction: column;">
+                <button style="background-color: teal; border: none; padding: 10px 0; border-radius: 200px; margin: 2px 10px; color: #fff;">
+                  select
+                </button>
+                <button onclick="togglePopup()" style="color: teal; background-color: #fff; border: none; padding: 10px 2px; margin: 10px;">
+                  close
+                </button>
+              </div>
+            </div>
+            <div id="overlay" class="overlay"></div>
+            <!-- Overlay -->
+
+            <div class="flex-col">
+              <label for="name">How did you hear about Elfster?</label>
+              <select name="" id="" title="Choose one" class="choose-input" >
+                <option value="">Choose One</option>
+                <option value="">Instagram</option>
+                <option value="">Google</option>
+                <option value="">Bing</option>
+                <option value="">Friend/Family</option>
+                <option value="">Tik Tok</option>
+                <option value="">Pintrest</option>
+                <option value="">SecretSanta.com</option>
+                <option value="">Facebook</option>
+                <option value="">Other</option>
+              </select>
+            </div>
+
+            <div class="flex-col">
+              <label for="name">Add a Note</label>
+              <textarea
+                type="date"
+                name=""
+                id="name"
+                rows="3"
+                class="textarea-style"
+                placeholder="Hey Everyone! We're exchanging gifts the super fun way-secretly! No drawing names out of an old hat. We've got Elfster to do that. Don't forget to make a Wishlist. It's how you'll score the perfect gift. See ya soon!"
+              ></textarea>
+            </div>
+          </div>
+          <a href="index3.html" class="started-btn">
+            <p>next, select image</p>
+            <span class="material-symbols-outlined"> arrow_forward </span>
+        </a>
+        </div>
+      </div>
+      <div class="stickers">
+        <img
+          src="./images/4.9-start.png"
+          alt=""
+          style="position: absolute; top: 140px; right: 190px"
+        />
+        <img
+          src="./images/33million.png"
+          alt=""
+          style="position: absolute; top: 260px; right: 50px"
+        />
+      </div>
+      <div class="stickers-1">
+        <img
+          src="./images/hero-badge-mobile.png"
+          alt=""
+          style="position: absolute; top: 30px; right: 25px; width: 120px;"
+        />
+      </div>
+    </section>
+    <section id="text-monio">
+        <div class="reviews-parent">
+            <div class="reviews">
+              <div class="reviews-child">
+                <img src="./images/handshake-heart.png" alt="" height="20px" />
+                <p>Trusted by 33 million people</p>
+              </div>
+              <div class="vertical-bar"></div>
+              <div class="reviews-child">
+                <img src="./images/stars-group.png" alt="" height="20px" />
+                <p>4.9 stars | 234K ratings</p>
+              </div>
+              <div class="vertical-bar"></div>
+              <div class="reviews-child">
+                <img src="./images/trophy.png" alt="" height="20px" />
+                <p>#1 Secret Santa Generator</p>
+              </div>
+            </div>
+        </div>
+      <div class="footer-parernt">
+        <div id="footer">
+          <div style="text-align: center">
+            <img src="./images/elfster-logo-black.png" alt="" width="120px" />
+          </div>
+          <div>
+            <ul class="footer-item">
+              <li>About</li>
+              <li>Adverise with Us</li>
+              <li>Help</li>
+              <li>Tell a Friend</li>
+            </ul>
+          </div>
+          <div class="social-links-parent">
+            <div class="social-links">
+              <p>Follow on Social:</p>
+              <a href="">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-pinterest-p"></i>
+              </a>
+              <a href="">
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </div>
+            <div class="store-links">
+                <p>Download the App:</p>
+                <div>
+                    <a href="">
+                        <img src="./images/elfster-android-app-play-store-button.png" alt="" height="30px">
+                    </a>
+                    <a href="">
+                        <img src="./images/elfster-ios-app-store-button.png" alt="" height="30px">
+                    </a>
+                </div>
+            </div>
+            <div class="store-links">
+                <p>Sign Up for Gifts, Giveaways & Good News!</p>
+                <div>
+                    <input
+                    type="text"
+                    name=""
+                    id="name"
+                    placeholder="Enter Email"
+                    class="signup-input"
+                  >
+                  <span class="material-symbols-outlined move-arrow"> arrow_forward </span>
+                </input>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy-policy">
+        <p>© 2024 Elfster, Inc.</p>
+        <ul class="privacy-policy-items">
+          <li>Privacy Policy</li>
+          <li>CA Privacy Rights</li>
+          <li>Terms Of Service</li>
+        </ul>
+        <div>
+          <select name="" id="" title="location" class="location">
+            <option value="">USA</option>
+            <option value="">Canada</option>
+            <option value="">UK</option>
+          </select>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://kit.fontawesome.com/af35b67654.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js"></script>
+  </body>
+</html>
